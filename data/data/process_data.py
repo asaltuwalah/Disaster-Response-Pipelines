@@ -32,7 +32,9 @@ def clean_data(df):
 
         #Converting column data type to numeric
         categories[column] = categories[column].astype(int)
-
+        
+    #Convert all values 0 or 1
+    categories = (categories > 0).astype(int)
     #Dropping the original categories column from `df`
     df = df.drop (['categories'], axis = 1)
 
@@ -48,7 +50,7 @@ def clean_data(df):
 def save_data(df, database_filename):
     
     engine = create_engine('sqlite:///{}'.format(database_filename))
-    df.to_sql('DisasterResponse', engine, index=False)
+    df.to_sql('DisasterResponse', engine, if_exists='replace',index=False)
 
 def main():
     if len(sys.argv) == 4:
