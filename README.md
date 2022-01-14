@@ -1,14 +1,7 @@
-# Disaster Response Pipeline Project
+# Disaster-Response-Pipelines
 
-### Instructions:
-1. Run the following commands in the project's root directory to set up your database and model.
+## Overview
+The project's goal is to build a model for an AI that can classify disaster messages. An emergency worker can use the web app to enter a new message and receive classification results in numerous categories, allowing them to determine what kind of assistance is required.
 
-    - To run ETL pipeline that cleans data and stores in database
-        `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
-    - To run ML pipeline that trains classifier and saves
-        `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
 
-2. Run the following command in the app's directory to run your web app.
-    `python run.py`
-
-3. Go to http://0.0.0.0:3001/
+![](https://user-images.githubusercontent.com/21197883/140520922-a0b5f437-4c3b-4402-89da-85f41d2ee6d8.png)
